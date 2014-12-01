@@ -1,0 +1,141 @@
+\documentclass[12pt,a4paper]{article}
+\pdfoutput=1
+
+%% template from Klas Eskilson
+%% This huge block of usepackages does a lot of things.
+%% It makes the text pritty on screens and ensures that you can use some common
+%% tools.
+%%
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+% change language to whatever you write in
+\usepackage[english]{babel}
+\usepackage{amsmath}
+\usepackage{lmodern}
+\usepackage{listings}
+\usepackage{units}
+\usepackage{icomma}
+\usepackage{color}
+\usepackage{graphicx}
+\usepackage{multicol,caption}
+\usepackage{bbm}
+\usepackage{hyperref}
+\usepackage{xfrac}
+\usepackage{lipsum}
+\newcommand{\N}{\ensuremath{\mathbbm{N}}}
+\newcommand{\Z}{\ensuremath{\mathbbm{Z}}}
+\newcommand{\Q}{\ensuremath{\mathbbm{Q}}}
+\newcommand{\R}{\ensuremath{\mathbbm{R}}}
+\newcommand{\C}{\ensuremath{\mathbbm{C}}}
+\newcommand{\rd}{\ensuremath{\mathrm{d}}}
+\newcommand{\id}{\ensuremath{\,\rd}}
+
+%  if you want a page header/footer, use this!
+% \usepackage{fancyhdr}
+% \pagestyle{fancy}
+% \lhead{Left in the header}
+% \rhead{Right in the header: \today}
+
+% This creates a nice figure environment that puts the image where you use it,
+% and not where LaTeX wants it to be.
+\newenvironment{Figure}
+  {\par\medskip\noindent\minipage{\linewidth}}
+  {\endminipage\par\medskip}
+
+% neat horisontal line
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+
+\begin{document}
+
+\title{The title}
+\author{The author}
+\date{12-12-12}
+
+%%
+%% Use one of these title methods
+%%
+% \maketitle % simpe latex title
+\begin{titlepage}
+\begin{center}
+
+% Pre-title
+\textsc{TNG022 - Modelling and simulation }\\[0.5cm]
+
+% Title
+\HRule \\[0.4cm]
+{ \huge \bfseries Modelling and simulating a robot for measuring \\[0.4cm] }
+
+\HRule \\[1.5cm]
+
+% Author and supervisor
+\begin{minipage}{0.4\textwidth}
+\begin{flushleft} \large
+% Author
+Group 33\\
+Carl Englund\\
+\emph{caren083@student.liu.se}
+Erik Sandrén\\
+\emph{erila135@student.liu.se}
+\end{flushleft}
+\end{minipage}
+\begin{minipage}{0.4\textwidth}
+\begin{flushright} \large
+% supervisor
+Shelley Torgnyson\\
+\emph{supervisor@example.com}
+\end{flushright}
+\end{minipage}
+
+\vfill
+
+% Bottom of the page
+{\large Laboration performed: November 27, 2014\\}
+{\large Report submitted: \today}
+
+\end{center}
+\end{titlepage}
+
+% empty page after title page, ignore this page in the numbering
+\newpage\null\thispagestyle{empty}\pagenumbering{gobble}\newpage
+
+\newpage\pagenumbering{arabic} % Arabic page numbers (and reset to 1)
+
+% optional abstract!
+\begin{abstract}
+\lipsum[4]
+\end{abstract}
+
+\newpage
+
+% fairly self-explenatory
+\tableofcontents
+
+\newpage
+
+\section{Introduction}
+The purpose of the laboration is to measure the time constant for the DC-motor with two different softwares. The result of the measures are compared with each other and with the time constant given by the data sheet of the DC-motor.
+
+\section{Method and materials}
+description of robot
+SIMULINK and 20SIM were used during the laboration.
+\lipsum[4]
+
+\section{Results}
+\lipsum[4]
+
+\section{Discussion}
+Discussion about mechanical time constant data sheet gives whole system while the model can give us the mechanical time constant.
+
+Compare results between simulink and 20sim with data sheet.
+\lipsum[4]
+
+\section{Conclusion}
+\lipsum[4]
+
+% optional bibliography
+\begin{thebibliography}{99}
+
+\end{thebibliography}
+
+\end{document}
