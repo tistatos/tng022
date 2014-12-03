@@ -118,11 +118,19 @@ A big part of modelling and simulation revolves around the usage of model descri
 
 The purpose of the laboration is to determine the time constant for a DC-motor with two different methods, a simulation of the system and an analytical method. The result of the methods are compared with each other and also with a time constant given by the specifications of the data sheet for the DC-motor. The specifications from the data sheet are achieved by physical measurements by the manufacturer.
 
-The time constant of a system determines how fast it reacts to changes. The time constant can be retrieved as the time when the system reaches 63\% from the step response's final value.
+The time constant, often denoted with $\tau$, of a system determines how fast it react to changes. The time constant can be retrieved as the time when the system reaches 63\% from the step response's final value. The constant can also be read from the transfer function of a system if given in the form of (\ref{eq:transfer}).
+
+\begin{equation}
+\label{eq:transfer}
+\frac{K}{\tau s+1}
+\end{equation}
 
 \section{Method and materials}
 The DC-motor that was used in the laboration was part of a robot arm used for measuring. A schematic picture of the motor was given, see figure \ref{fig:dcmoto}.
 The two software packages that were used during the laboration was SIMULINK and 20SIM. The purpose of these softwares are to model electrical and mechanical systems. The softwares can also be used to simulate the models.
+
+As a preparation task for the lab the DC-motor was analyzed and a bond graph was constructed. From the bond graph all the numerical constants were determined and a simple block diagram was constructed for the entire motor.
+
 \begin{figure}
   \centering
   \includegraphics[width=1\linewidth]{schematicdcmotor.png}
