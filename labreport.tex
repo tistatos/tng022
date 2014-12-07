@@ -137,22 +137,23 @@ As a preparation task for the lab the DC-motor was analyzed and a bond graph was
   \label{fig:dcmoto}
 \end{figure}
 
-The system was simulated in 20Sim and Simulink induvidally and with three different simulations.Once for the entire system, electrical part and the mechanical part. All these simulations corresponded with the measured results in the data sheet. The results can be seen in figure X Y and Z. Due to the fact that 20Sims graph tools was found more time consuming then Matlab the results from the simulations were exported from 20Sim to Matlab.
+The system was simulated in 20Sim and Simulink induvidually and with three different simulations. Once for the entire system, electrical part and the mechanical part. All these simulations corresponded with the measured results in the data sheet. The results can be seen in figure X Y and Z. Due to the fact that 20Sims graph tools was found more time consuming then Matlab the results from the simulations were exported from 20Sim to Matlab.
 \section{Results}
 
 
 \section{Discussion}
-Discussion about mechanical time constant data sheet gives whole system while the model can give us the mechanical time constant.
+As seen in the figure X the computed time constant from the simulations, and analitically were the same as the ones denoted in the data sheet. All of this was expected since the systems used in the different methods was identical.
 
-Compare results between simulink and 20sim with data sheet.
-\lipsum[4]
+When interpreting the results it can be seen that the electrical system is the fastest while the mechanical system is a bit slower. The entire system is faster than the mechanical system, this is due to the feedback provided from the electrical part.
+
+<--- NEEDS TO MENTION SOMETHING ABOUT THE ANALYTICAL SOLUTION HERE --->
+
+The results retrieved from the data sheet is provided by the manufacturer of the motor and are constructed from physical measurements of the system, but there is no information of how these measurements have been conducted.
 
 \section{Conclusion}
-When comparing the different methods for determining the time constant it is easy to see (pros and cons between) them. 
+As described in the report computing the time constant analitically can be fast easy and accurate. But depending on the system it may become hard to determine time constant due to the complexity of the time constant equation. When this problem occurs it is easier to use software such as 20Sim or Simulink and compute the time constant using the methods provided in those softwares.
 
-Computing the time constant analitically can be fast easy and accurate. But depending on the system it may become hard to determine time constant due to the complexity of the time constant equation. When this problem occurs it might be easier to use 20Sim or Simulink and compute the time constant using the methods provided in the programs.
-
-The most optimal way to compute the time constant depends on the system.
+Therefore one needs to carefully analyze the system and decide if it would be more effective to compute the time constant analitically versus computing it using a simulation software such as the ones mentioned before.
 
 % optional bibliography
 \begin{thebibliography}{99}
