@@ -129,7 +129,7 @@ The time constant, often denoted with $\tau$, of a system determines how fast it
 The DC-motor that was used in the laboration was part of a robot arm used for measuring. A schematic picture of the motor was given, see figure \ref{fig:dcmoto}.
 The two software packages that were used during the laboration was SIMULINK and 20SIM. The purpose of these softwares are to model electrical and mechanical systems. The softwares can also be used to simulate the models.
 
-As a preparation task for the lab the DC-motor was analyzed and a bond graph was constructed. From the bond graph all the numerical constants were determined and a simple block diagram was constructed for the entire motor. 
+As a preparation task for the lab the DC-motor was analyzed and a bond graph was constructed. From the bond graph all the numerical constants were determined and a simple block diagram was constructed for the entire motor.
 \begin{figure}
   \centering
   \includegraphics[width=1\linewidth]{schematicdcmotor.png}
@@ -137,7 +137,30 @@ As a preparation task for the lab the DC-motor was analyzed and a bond graph was
   \label{fig:dcmoto}
 \end{figure}
 
-The system was simulated in 20Sim and Simulink induvidally and with three different simulations.Once for the entire system, electrical part and the mechanical part. All these simulations corresponded with the measured results in the data sheet. The results can be seen in figure X Y and Z. Due to the fact that 20Sims graph tools was found more time consuming then Matlab the results from the simulations were exported from 20Sim to Matlab.
+The system was simulated in 20Sim and Simulink individually and with three different simulations. Once for the entire system, electrical part and the mechanical part. The simulations for the entire system and the electrical part corresponded with the measured results in the data sheet. The results can be seen in figure X Y and Z. Due to the fact that 20Sims graph tools was found more time consuming then Matlab the results from the simulations were exported from 20Sim to Matlab.
+\begin{figure}
+  \centering
+  \includegraphics[width=.4\linewidth]{schematicdcmotor.png}
+  \caption{\emph{electrical step response}}
+  \label{fig:electrical}
+\end{figure}
+
+\begin{figure}
+  \centering
+  \includegraphics[width=.4\linewidth]{schematicdcmotor.png}
+
+  \caption{\emph{mechanical part step response}}
+  \label{fig:mechanical}
+\end{figure}
+
+\begin{figure}
+  \centering
+  \includegraphics[width=.4\linewidth]{schematicdcmotor.png}
+  \caption{\emph{step response for entire system}}
+  \label{fig:entire}
+\end{figure}
+
+
 \section{Results}
 
 
@@ -148,7 +171,7 @@ Compare results between simulink and 20sim with data sheet.
 \lipsum[4]
 
 \section{Conclusion}
-When comparing the different methods for determining the time constant it is easy to see (pros and cons between) them. 
+When comparing the different methods for determining the time constant it is easy to see (pros and cons between) them.
 
 Computing the time constant analitically can be fast easy and accurate. But depending on the system it may become hard to determine time constant due to the complexity of the time constant equation. When this problem occurs it might be easier to use 20Sim or Simulink and compute the time constant using the methods provided in the programs.
 
