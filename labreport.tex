@@ -103,7 +103,7 @@ Shelley Torgnyson\\
 
 % optional abstract!
 \begin{abstract}
-\lipsum[4]
+This report consists of a comparison between methods to determine the time constant for a system based on a DC-motor. This constant is used in designing systems and the reaction time of a system. The report also describes the importance of when to calculate the time constant by the analytical method and when to use a simulation to determine the constant.
 \end{abstract}
 
 \newpage
@@ -136,49 +136,52 @@ As a preparation task for the lab, the DC-motor was analyzed and a bond graph wa
   \caption{\emph{Schematic illustration of the DC-motor}}
   \label{fig:dcmoto}
 \end{figure}
+
 The analytical solution for the system's time constants were determined with the help of the block diagram and the system's variables taken from the data sheet. The time constants for the different part of the motor were calculated.
 
 The system was simulated in 20Sim and Simulink individually and with three different simulations. Once for the entire system, the electrical part and the mechanical part. The simulations for the entire system and the electrical part corresponded with the measured results in the data sheet. The results can be seen in figure \ref{fig:electrical}, figure \ref{fig:mechanical} and figure \ref{fig:entire}.
+
 \section{Results}
 The time constants from these graphs were calculated using theory from \textit{Reglerteknik: Grundläggande Teori} \cite{regler} and corresponded with the results from the data sheet as stated above. The calculated values can also be seen in table \ref{table:results}.
-\begin{figure}[h!]
-  \centering
-  \includegraphics[width=.4\linewidth]{electricalsim.png}
+
+\begin{figure}[h]
+\begin{minipage}{.5\linewidth}
+\centering
+  \includegraphics[width=1\linewidth]{electricalsim.png}
   \caption{\emph{electrical step response}}
   \label{fig:electrical}
+\end{minipage}
+\begin{minipage}{.5\linewidth}
+  \centering
+  \includegraphics[width=1\linewidth]{fullsim.png}
+  \caption{\emph{step response for entire system}}
+  \label{fig:entire}
+\end{minipage}
 \end{figure}
 
-\begin{figure}[h!]
-  \centering
-  \includegraphics[width=.4\linewidth]{mechanicalsim.png}
-
+\begin{figure}[h]
+\centering
+  \includegraphics[width=1\linewidth]{mechanicalsim.png}
   \caption{\emph{mechanical part step response}}
   \label{fig:mechanical}
 \end{figure}
 
-\begin{figure}[h!]
-  \centering
-  \includegraphics[width=.4\linewidth]{fullsim.png}
-  \caption{\emph{step response for entire system}}
-  \label{fig:entire}
-\end{figure}
-
-\begin{table}[H]
+\begin{table}[Ht!]
 \caption{\label{table:results}The calculated results}
 \begin{center}
-\begin{tabular}{ |c|c|c| } 
+\begin{tabular}{ |c|c|c| }
  \hline
  \textbf{Part} & \textbf{Time constant - Graph} & \textbf{Time constant - Analytical} \\
  \hline
  Electrical & $\tau_{e} = 0.0029 s$ & $\tau_{e} = 0.0029 s$ \\
  Mechanical & $\tau_{m} = 0.3 s$ & $\tau_{m} = 0.3 s$\\
- Total & $\tau_{tot} = 0.014 s$ & Not calculated\\ 
+ Total & $\tau_{tot} = 0.014 s$ & Not calculated\\
  \hline
 \end{tabular}
 \end{center}
 \end{table}
 \section{Discussion}
-As seen in table \ref{table:results} the computed time constant from the simulations, and analitically were the same as the ones denoted in the data sheet. All of this was expected since the systems used in the different methods was identical.
+As seen in table \ref{table:results} the computed time constant from the simulations, and analytically were the same as the ones denoted in the data sheet. All of this was expected since the systems used in the different methods was identical.
 
 When interpreting the results it can be seen that the electrical system is the fastest while the mechanical system is a bit slower. The entire system is faster than the mechanical system, this is due to the feedback provided from the electrical part. The entire system was not calculated analytically due to the complexity of it.
 
