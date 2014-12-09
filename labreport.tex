@@ -139,50 +139,59 @@ As a preparation task for the lab, the DC-motor was analyzed and a bond graph wa
 The analytical solution for the system's time constants were determined with the help of the block diagram and the system's variables taken from the data sheet. The time constants for the different part of the motor were calculated.
 
 The system was simulated in 20Sim and Simulink individually and with three different simulations. Once for the entire system, the electrical part and the mechanical part. The simulations for the entire system and the electrical part corresponded with the measured results in the data sheet. The results can be seen in figure \ref{fig:electrical}, figure \ref{fig:mechanical} and figure \ref{fig:entire}.
-\begin{figure}
+\section{Results}
+The time constants from these graphs were calculated using theory from \textit{Reglerteknik: Grundläggande Teori} \cite{regler} and corresponded with the results from the data sheet as stated above. The calculated values can also be seen in table \ref{table:results}.
+\begin{figure}[h!]
   \centering
-  \includegraphics[width=.4\linewidth]{schematicdcmotor.png}
+  \includegraphics[width=.4\linewidth]{electricalsim.png}
   \caption{\emph{electrical step response}}
   \label{fig:electrical}
 \end{figure}
 
-\begin{figure}
+\begin{figure}[h!]
   \centering
-  \includegraphics[width=.4\linewidth]{schematicdcmotor.png}
+  \includegraphics[width=.4\linewidth]{mechanicalsim.png}
 
   \caption{\emph{mechanical part step response}}
   \label{fig:mechanical}
 \end{figure}
 
-\begin{figure}
+\begin{figure}[h!]
   \centering
-  \includegraphics[width=.4\linewidth]{schematicdcmotor.png}
+  \includegraphics[width=.4\linewidth]{fullsim.png}
   \caption{\emph{step response for entire system}}
   \label{fig:entire}
 \end{figure}
 
-\section{Results}
-
-
+\begin{table}[H]
+\caption{\label{table:results}The calculated results}
+\begin{center}
+\begin{tabular}{ |c|c|c| } 
+ \hline
+ \textbf{Part} & \textbf{Time constant - Graph} & \textbf{Time constant - Analytical} \\
+ \hline
+ Electrical & $\tau_{e} = 0.0029 s$ & $\tau_{e} = 0.0029 s$ \\
+ Mechanical & $\tau_{m} = 0.3 s$ & $\tau_{m} = 0.3 s$\\
+ Total & $\tau_{tot} = 0.014 s$ & Not calculated\\ 
+ \hline
+\end{tabular}
+\end{center}
+\end{table}
 \section{Discussion}
-As seen in the figure X the computed time constant from the simulations, and analitically were the same as the ones denoted in the data sheet. All of this was expected since the systems used in the different methods was identical.
+As seen in table \ref{table:results} the computed time constant from the simulations, and analitically were the same as the ones denoted in the data sheet. All of this was expected since the systems used in the different methods was identical.
 
-When interpreting the results it can be seen that the electrical system is the fastest while the mechanical system is a bit slower. The entire system is faster than the mechanical system, this is due to the feedback provided from the electrical part.
-
-\section{Conclusion}
-When comparing the different methods for determining the time constant it is easy to see (pros and cons between) them.
-<--- NEEDS TO MENTION SOMETHING ABOUT THE ANALYTICAL SOLUTION HERE --->
+When interpreting the results it can be seen that the electrical system is the fastest while the mechanical system is a bit slower. The entire system is faster than the mechanical system, this is due to the feedback provided from the electrical part. The entire system was not calculated analytically due to the complexity of it.
 
 The results retrieved from the data sheet is provided by the manufacturer of the motor and are constructed from physical measurements of the system, but there is no information of how these measurements have been conducted.
 
 \section{Conclusion}
-As described in the report computing the time constant analytically can be fast easy and accurate. But depending on the system it may become hard to determine time constant due to the complexity of the time constant equation. When this problem occurs it is easier to use software such as 20Sim or Simulink and compute the time constant using the methods provided in those softwares.
+As described in the report computing the time constant analytically can be quick and accurate. But depending on the system it may become hard to determine time constant due to the complexity of the time constant equation. When this problem occurs it is easier to use software such as 20Sim or Simulink and compute the time constant using the methods provided in those softwares.
 
 Therefore one needs to carefully analyze the system and decide if it would be more effective to compute the time constant analitically versus computing it using a simulation software such as the ones mentioned before.
 
 % optional bibliography
 \begin{thebibliography}{99}
-
+\bibitem{regler} Torkel Glad and Lennart Ljung, 2006. \emph{Reglerteknik: Grundläggande teori}
 \end{thebibliography}
 
 \end{document}
