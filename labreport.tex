@@ -83,7 +83,7 @@ Erik Sandrén\\
 \begin{flushright} \large
 % supervisor
 Shelley Torgnyson\\
-\emph{supervisor@example.com}
+\emph{shelley.torgnyson@liu.se}
 \end{flushright}
 \end{minipage}
 
@@ -139,34 +139,12 @@ As a preparation task for the lab, the DC-motor was analyzed and a bond graph wa
 
 The analytical solution for the system's time constants were determined with the help of the block diagram and the system's variables taken from the data sheet. The time constants for the different part of the motor were calculated.
 
-The system was simulated in 20Sim and Simulink individually and with three different simulations. Once for the entire system, the electrical part and the mechanical part. The simulations for the entire system and the electrical part corresponded with the measured results in the data sheet. The results can be seen in figure \ref{fig:electrical}, figure \ref{fig:mechanical} and figure \ref{fig:entire}.
+The system was simulated in 20Sim and Simulink individually and with three different simulations. Once for the entire system, the electrical part and the mechanical part. The simulations for the entire system and the electrical part corresponded with the measured results in the data sheet. The results can be seen in figure \ref{fig:electrical}, figure \ref{fig:mechanical} and figure \ref{fig:entire} in appendix \ref{App:appendix}
 
 \section{Results}
 The time constants from these graphs were calculated using theory from \textit{Reglerteknik: Grundläggande Teori} \cite{regler} and corresponded with the results from the data sheet as stated above. The calculated values can also be seen in table \ref{table:results}.
 
-\begin{figure}[h]
-\begin{minipage}{.5\linewidth}
-\centering
-  \includegraphics[width=1\linewidth]{electricalsim.png}
-  \caption{\emph{electrical step response}}
-  \label{fig:electrical}
-\end{minipage}
-\begin{minipage}{.5\linewidth}
-  \centering
-  \includegraphics[width=1\linewidth]{fullsim.png}
-  \caption{\emph{step response for entire system}}
-  \label{fig:entire}
-\end{minipage}
-\end{figure}
-
-\begin{figure}[h]
-\centering
-  \includegraphics[width=1\linewidth]{mechanicalsim.png}
-  \caption{\emph{mechanical part step response}}
-  \label{fig:mechanical}
-\end{figure}
-
-\begin{table}[Ht!]
+\begin{table}[ht!]
 \caption{\label{table:results}The calculated results}
 \begin{center}
 \begin{tabular}{ |c|c|c| }
@@ -196,5 +174,32 @@ Therefore one needs to carefully analyze the system and decide if it would be mo
 \begin{thebibliography}{99}
 \bibitem{regler} Torkel Glad and Lennart Ljung, 2006. \emph{Reglerteknik: Grundläggande teori}
 \end{thebibliography}
+
+\newpage
+\appendix
+\section{Appendix}
+\label{App:appendix}
+Step responces of the different subsystems and the whole system.
+\begin{figure}[h!]
+\begin{minipage}{.5\linewidth}
+\centering
+  \includegraphics[width=1\linewidth]{electricalsim.png}
+  \caption{\emph{electrical step response}}
+  \label{fig:electrical}
+\end{minipage}
+\begin{minipage}{.5\linewidth}
+  \centering
+  \includegraphics[width=1\linewidth]{fullsim.png}
+  \caption{\emph{step response for entire system}}
+  \label{fig:entire}
+\end{minipage}
+\end{figure}
+
+\begin{figure}[h!]
+\centering
+  \includegraphics[width=1\linewidth]{mechanicalsim.png}
+  \caption{\emph{mechanical step response}}
+  \label{fig:mechanical}
+\end{figure}
 
 \end{document}
